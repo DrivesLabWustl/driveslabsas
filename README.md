@@ -21,25 +21,11 @@ Louis](https://roelab.wustl.edu/).
 
 ## Installation
 
-You can install `roelabsasmacr` from
-[GitHub](https://github.com/RoeLabWustl/roelabsasmacr) with:
-
-``` bash
-git clone https://github.com/RoeLabWustl/roelabsasmacr
-```
-
-<br />
-
-Or you can download a zipped version of the repository
-[here](https://github.com/RoeLabWustl/roelabsasmacr/archive/refs/heads/main.zip),
-and unzip in a suitable location.
-
-<br />
-
-Then individual macros can be loaded in SAS with something like:
+Individual macros can be loaded in SAS with something like:
 
 ``` sas
-%include 'C:\Users\roe\Documents\roelabsasmacr\correlation_heatmap.sas';
+filename m url "https://raw.githubusercontent.com/RoeLabWustl/roelabsasmacr/main/correlation_heatmap.sas";
+%include m;
 ```
 
 <br />

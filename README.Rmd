@@ -62,22 +62,11 @@ The goal of ``r params$package`` is to provide helpful SAS Macros for the [Roe L
 
 ## Installation
 
-You can install ``r params$package`` from [GitHub](https://github.com/`r params$github`/`r params$package`) with:
-
-```bash
-git clone https://github.com/`r params$github`/`r params$package`
-```
-
-<br />
-
-Or you can download a zipped version of the repository [here](https://github.com/`r params$github`/`r params$package`/archive/refs/heads/main.zip), and unzip in a suitable location.
-
-<br />
-
-Then individual macros can be loaded in SAS with something like:
+Individual macros can be loaded in SAS with something like:
 
 ```sas
-%include 'C:\Users\roe\Documents\roelabsasmacr\correlation_heatmap.sas';
+filename m url "https://raw.githubusercontent.com/RoeLabWustl/roelabsasmacr/main/correlation_heatmap.sas";
+%include m;
 ```
 
 <br />

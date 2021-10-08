@@ -43,9 +43,9 @@ data correlation_heatmap_rattrmap;
     %let min=%sysevalf(&i./100);
     %let max=%sysevalf((&i.+1)/100);
     %let lightness=%sysfunc(abs(&i.));
-	* map 0 -> 5, 100 -> 100;
-	%let lightness=%sysevalf(5+(&lightness.-5)/100*&lightness.);
-	* reverse map 0 -> 100, 100 -> 5;
+	* linear map f(0)=5, f(100)=100 to avoid overly dark colors;
+	%let lightness=%sysevalf(5+(100-5)/100*&lightness.);
+	* reverse map f(0)=100, f(100)=5 so bigger correlations are darker;
 	%let lightness=%sysevalf(105-&lightness.);
     min=&min;
     max=&max;
@@ -105,7 +105,8 @@ ods graphics / width=640 height=400px;
 title "Correlation Heat Map";
 title2 "Continuous Color Ramp and Legend";
 proc sgplot data=correlation_heatmap rattrmap=correlation_heatmap_rattrmap;
-   heatmapparm x=Var y=WithVar colorresponse=Corr / outline discretex rattrid=myid;
+   heatmapparm x=Var y=WithVar colorresponse=Corr / 
+     outline discretex rattrid=myid;
    text x=Var y=WithVar text=pValue / textattrs=(size=12pt) strip;
    gradlegend;
 run;
@@ -119,5 +120,6 @@ delete correlation_heatmap_rattrmap
        correlation_heatmap_2 
        correlation_heatmap;
 run;
+quit;
 
 %mend correlation_heatmap;
