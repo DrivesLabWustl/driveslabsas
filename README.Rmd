@@ -2,7 +2,7 @@
 output: github_document
 params:
   github: RoeLabWustl
-  package: roelabsasmacr
+  package: roelabsas
   font: Rockwell
   font_ext: ttf
   color: "#a51417"
@@ -65,7 +65,7 @@ The goal of ``r params$package`` is to provide helpful SAS Macros for the [Roe L
 Individual macros can be loaded in SAS with something like:
 
 ```sas
-filename m url "https://raw.githubusercontent.com/RoeLabWustl/roelabsasmacr/main/correlation_heatmap.sas";
+filename m url "https://raw.githubusercontent.com/RoeLabWustl/roelabsas/main/sasmacr/correlation_heatmap.sas";
 %include m;
 ```
 

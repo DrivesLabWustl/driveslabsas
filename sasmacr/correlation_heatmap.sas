@@ -1,6 +1,6 @@
 /******************************************************************************
 * Program:     correlation_heatmap.sas                                        *
-* Location:    https://github.com/RoeLabWustl/roelabsasmacr                   *
+* Location:    https://github.com/RoeLabWustl/roelabsas/sasmacr               *
 * Author:      Matthew Schuelke <schuelke@wustl.edu>                          *
 * Created:     2021-08-08                                                     *
 * Version:     2021-08-08                                                     *

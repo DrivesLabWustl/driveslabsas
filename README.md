@@ -1,21 +1,20 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# roelabsasmacr <img src="man/figures/roelabsasmacr_hex.png" align="right" width="125px" />
+# roelabsas <img src="man/figures/roelabsas_hex.png" align="right" width="125px" />
 
 <!-- badges: start -->
 
 [![Under
-Development](https://img.shields.io/badge/status-under%20development-red.svg)](https://github.com/RoeLabWustl/roelabsasmacr)
+Development](https://img.shields.io/badge/status-under%20development-red.svg)](https://github.com/RoeLabWustl/roelabsas)
 [![Last
-Commit](https://img.shields.io/github/last-commit/RoeLabWustl/roelabsasmacr.svg)](https://github.com/RoeLabWustl/roelabsasmacr/commits/master)
+Commit](https://img.shields.io/github/last-commit/RoeLabWustl/roelabsas.svg)](https://github.com/RoeLabWustl/roelabsas/commits/master)
 <!-- badges: end -->
 
 ## Overview
 
-The goal of `roelabsasmacr` is to provide helpful SAS Macros for the
-[Roe Lab at Washington University in Saint
-Louis](https://roelab.wustl.edu/).
+The goal of `roelabsas` is to provide helpful SAS Macros for the [Roe
+Lab at Washington University in Saint Louis](https://roelab.wustl.edu/).
 
 <br />
 
@@ -24,7 +23,7 @@ Louis](https://roelab.wustl.edu/).
 Individual macros can be loaded in SAS with something like:
 
 ``` sas
-filename m url "https://raw.githubusercontent.com/RoeLabWustl/roelabsasmacr/main/correlation_heatmap.sas";
+filename m url "https://raw.githubusercontent.com/RoeLabWustl/roelabsas/main/sasmacr/correlation_heatmap.sas";
 %include m;
 ```
 
